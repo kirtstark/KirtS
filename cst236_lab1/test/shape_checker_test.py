@@ -132,6 +132,35 @@ class TestGetTriangleType(TestCase):
         result = get_triangle_type(7, 2.84, 7)
         self.assertEqual(result, 'isosceles')
 
+# These are not actual triangles (wrong dimensions) and should return invalid
+
+    def test_get_triangle_invalid_sizes1(self):
+        result = get_triangle_type(1, 2, 3)
+        self.assertEqual(result, 'invalid')
+
+    def test_get_triangle_invalid_sizes2(self):
+        result = get_triangle_type(1, 3, 2)
+        self.assertEqual(result, 'invalid')
+
+    def test_get_triangle_invalid_sizes3(self):
+        result = get_triangle_type(3, 2, 1)
+        self.assertEqual(result, 'invalid')
+
+    def test_get_triangle_invalid_sizes4(self):
+        result = get_triangle_type(1, 2, 10)
+        self.assertEqual(result, 'invalid')
+
+    def test_get_triangle_invalid_sizes5(self):
+        result = get_triangle_type(10, 2, 1)
+        self.assertEqual(result, 'invalid')
+
+    def test_get_triangle_invalid_sizes6(self):
+        result = get_triangle_type(10, 20, 3)
+        self.assertEqual(result, 'invalid')
+
+# end of invalid sizes
+
+
     def test_get_triangle_all_char(self):
         result = get_triangle_type('a', 'b', 'c')
         self.assertEqual(result, 'invalid')
