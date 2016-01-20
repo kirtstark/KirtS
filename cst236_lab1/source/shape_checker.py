@@ -23,6 +23,7 @@ def get_triangle_type(a=0, b=0, c=0):
     :return: "equilateral", "isosceles", "scalene" or "invalid"
     :rtype: str
     """
+
     if isinstance(a, (tuple, list)) and len(a) == 3:
         c = a[2]
         b = a[1]

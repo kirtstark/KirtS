@@ -1,0 +1,209 @@
+#0015: The system shall provide a means of providing an answer to the previously asked question.
+
+		test_ask_question_with_no_answer
+		test_ask_question_with_no_answer2
+
+#0021: If no previous question has been asked the system shall respond with "Please ask a question first"
+		test_ask_question_with_no_answer2
+		test_correct_answer_for_no_question
+
+#0012: The system shall exclude any number value from match code and provide the values to generator function (if one exists)
+
+		test_ask_valid_quadrilateral_question1
+		test_ask_valid_quadrilateral_question2
+		test_ask_valid_triangle_question1
+		test_ask_valid_triangle_question2
+		test_ask_valid_triangle_question3
+		test_ask_valid_triangle_question4
+		test_ask_valid_triangle_question5
+		test_ask_valid_triangle_question6
+
+#0020: The system shall accept and store answers to previous questions in the form of a string or a function pointer and store it as the generator function.
+
+		test_ask_question_with_no_answer2
+
+#0010: The system shall break a question down into words separated by space
+
+		test_ask_no_space1
+		test_ask_no_space2
+		test_ask_no_space3
+		test_ask_no_space4
+		test_ask_no_space5
+
+#0017: If no previous question has been asked the system shall respond with "Please ask a question first"
+
+		test_provide_answer_with_no_question
+
+#0016: The system shall accept and store answers to previous questions in the form of a string or a function pointer and store it as the generator function.
+
+		test_ask_question_with_no_answer
+		test_ask_question_with_no_answer2
+
+#0006: The system shall accept questions in the form of strings and attempt to answer them
+
+		test_ask_correct_type1
+		test_ask_correct_type2
+		test_ask_correct_type3
+		test_ask_correct_type4
+		test_ask_correct_type5
+		test_ask_correct_type6
+
+#0007: The system shall answer questions that begin with one of the following valid question keywords: "How", "What", "Where", "Why" and "Who"
+
+		test_ask_correct_type2
+		test_ask_correct_type3
+		test_ask_correct_type4
+		test_ask_correct_type5
+		test_ask_correct_type6
+		test_ask_lowercase1
+		test_ask_lowercase2
+		test_ask_lowercase3
+		test_ask_lowercase4
+		test_ask_lowercase5
+
+#0004: The system shall accept quadrilateral sides as floats or integers
+
+		test_get_quadrilateral_type_rectangle_all_long
+		test_get_quadrilateral_type_rectangle_mix1
+		test_get_quadrilateral_type_rectangle_mix2
+		test_get_quadrilateral_type_rectangle_too_long
+		test_get_quadrilateral_type_rhombus_all_long
+		test_get_quadrilateral_type_square_all_long
+		test_get_quadrilateral_type_square_large_long
+		test_get_quadrilateral_type_square_small_long
+		test_get_quadrilateral_type_square_too_long
+		test_get_quadrilateral_type_square_too_short
+
+#0005: The system shall accept quadrilateral angles as floats or integers
+
+		test_get_quadrilateral_type_rectangle_angle_too_small
+		test_get_quadrilateral_type_rhombus_all_long
+		test_get_quadrilateral_type_square_angle_too_large
+
+#0002: The system shall accept three triangle sides as length in either float or integers
+
+		test_get_triangle_equalateral_large_float
+		test_get_triangle_equalateral_large_int
+		test_get_triangle_equalateral_small_float
+		test_get_triangle_equilateral_all_float
+		test_get_triangle_equilateral_all_int
+		test_get_triangle_equilateral_float_equals_int
+		test_get_triangle_iscoceles_all_float1
+		test_get_triangle_iscoceles_all_float2
+		test_get_triangle_iscoceles_all_float3
+		test_get_triangle_iscoceles_all_mix1
+		test_get_triangle_iscoceles_all_mix2
+		test_get_triangle_iscoceles_all_mix3
+		test_get_triangle_iscoceles_all_mix4
+		test_get_triangle_iscoceles_all_mix5
+		test_get_triangle_iscoceles_all_mix6
+		test_get_triangle_isosceles_large_float
+		test_get_triangle_isosceles_large_int
+		test_get_triangle_isosceles_small_float
+		test_get_triangle_scalene_all_float
+		test_get_triangle_scalene_all_mix1
+		test_get_triangle_scalene_all_mix2
+		test_get_triangle_scalene_all_mix3
+		test_get_triangle_scalene_all_mix4
+		test_get_triangle_scalene_all_mix5
+		test_get_triangle_scalene_large_float
+		test_get_triangle_scalene_large_int
+		test_get_triangle_scalene_small_float
+
+#0003: The system shall be able to determine the type of quadrilateral based on 4 sides and 4 angles
+
+		test_get_quadrilateral_type_rectangle_all_int
+		test_get_quadrilateral_type_rectangle_all_long
+		test_get_quadrilateral_type_rectangle_angle_too_small
+		test_get_quadrilateral_type_rectangle_mix1
+		test_get_quadrilateral_type_rectangle_mix2
+		test_get_quadrilateral_type_rectangle_too_long
+		test_get_quadrilateral_type_rhombus_all_int
+		test_get_quadrilateral_type_rhombus_all_long
+		test_get_quadrilateral_type_square_all_int
+		test_get_quadrilateral_type_square_all_long
+		test_get_quadrilateral_type_square_angle_too_large
+		test_get_quadrilateral_type_square_large_int
+		test_get_quadrilateral_type_square_large_long
+		test_get_quadrilateral_type_square_small_long
+		test_get_quadrilateral_type_square_too_long
+		test_get_quadrilateral_type_square_too_short
+
+#0013: When a valid match is determined the system shall return the answer
+
+		test_ask_valid_quadrilateral_question1
+		test_ask_valid_quadrilateral_question2
+		test_ask_valid_triangle_question1
+		test_ask_valid_triangle_question2
+		test_ask_valid_triangle_question3
+		test_ask_valid_triangle_question4
+		test_ask_valid_triangle_question5
+		test_ask_valid_triangle_question6
+
+#0001: The system shall be able to determine if a triangle is scalene, equilateral or isosceles
+
+		test_get_triangle_equalateral_large_float
+		test_get_triangle_equalateral_large_int
+		test_get_triangle_equalateral_small_float
+		test_get_triangle_equilateral_all_float
+		test_get_triangle_equilateral_all_int
+		test_get_triangle_equilateral_float_equals_int
+		test_get_triangle_iscoceles_all_float1
+		test_get_triangle_iscoceles_all_float2
+		test_get_triangle_iscoceles_all_float3
+		test_get_triangle_iscoceles_all_int1
+		test_get_triangle_iscoceles_all_int2
+		test_get_triangle_iscoceles_all_int3
+		test_get_triangle_iscoceles_all_mix1
+		test_get_triangle_iscoceles_all_mix2
+		test_get_triangle_iscoceles_all_mix3
+		test_get_triangle_iscoceles_all_mix4
+		test_get_triangle_iscoceles_all_mix5
+		test_get_triangle_iscoceles_all_mix6
+		test_get_triangle_isosceles_large_float
+		test_get_triangle_isosceles_large_int
+		test_get_triangle_isosceles_small_float
+		test_get_triangle_scalene_all_float
+		test_get_triangle_scalene_all_int
+		test_get_triangle_scalene_all_mix1
+		test_get_triangle_scalene_all_mix2
+		test_get_triangle_scalene_all_mix3
+		test_get_triangle_scalene_all_mix4
+		test_get_triangle_scalene_all_mix5
+		test_get_triangle_scalene_large_float
+		test_get_triangle_scalene_large_int
+		test_get_triangle_scalene_small_float
+
+#0011: The system shall determine an answer to a question as a correct if the keywords provide a 90% match and return the answer
+
+		test_ask_question_with_no_answer2
+
+#0014: When no valid match is determined the system shall return "I don't know, please provide the answer"
+
+		test_ask_no_valid_answer
+
+#0019: The system shall provide a means of updating an answer to the previously asked question.
+
+		test_ask_question_with_no_answer2
+
+#0018: If an attempt is made to provide an answer to an already answered question the system shall respond with "I don\'t know about that. I was taught differently" and not update the question
+
+		test_ask_question_with_no_answer2
+
+#0008: If the system does not detect a valid question keyword it shall return "Was that a question?"
+
+		test_ask_no_leading_keyword
+
+#0009: If the system does not detect a question mark at end of the string it shall return "Was that a question?"
+
+		test_ask_correct_type2
+		test_ask_correct_type3
+		test_ask_correct_type4
+		test_ask_correct_type5
+		test_ask_correct_type6
+		test_ask_no_question_mark1
+		test_ask_no_question_mark2
+		test_ask_no_question_mark3
+		test_ask_no_question_mark4
+		test_ask_no_question_mark5
+

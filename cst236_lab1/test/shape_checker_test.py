@@ -1,13 +1,17 @@
 """
 Test for source.shape_checker
 """
+
 from source.shape_checker import get_triangle_type
 from source.shape_checker import get_rectangle_type
 from source.shape_checker import get_quadrilateral_type
 from unittest import TestCase
+from test.plugins.ReqTracer import requirements
+
 
 class TestGetTriangleType(TestCase):
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_equilateral_all_int(self):
         result = get_triangle_type(1, 1, 1)
         self.assertEqual(result, 'equilateral')
@@ -52,82 +56,102 @@ class TestGetTriangleType(TestCase):
         result = get_triangle_type(1.157, 11.8, -.258)
         self.assertEqual(result, 'invalid')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_equilateral_all_float(self):
         result = get_triangle_type(15.89784, 15.89784, 15.89784)
         self.assertEqual(result, 'equilateral')
 
+    @requirements(['#0001'])
     def test_get_triangle_scalene_all_int(self):
         result = get_triangle_type(1, 2, 3)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_all_float(self):
         result = get_triangle_type(87.8754, 87.8755, 87.8756)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_all_mix1(self):
         result = get_triangle_type(87.8754, 1, 81)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_all_mix2(self):
         result = get_triangle_type(87.8754, 12, 87.8756)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_all_mix3(self):
         result = get_triangle_type(72, 87.8755, 87.8756)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_all_mix4(self):
         result = get_triangle_type(62, 63, 87.8756)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_all_mix5(self):
         result = get_triangle_type(87.8754, 87.8755, 5)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001'])
     def test_get_triangle_iscoceles_all_int1(self):
         result = get_triangle_type(3, 2, 2)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001'])
     def test_get_triangle_iscoceles_all_int2(self):
         result = get_triangle_type(3, 3, 2)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001'])
     def test_get_triangle_iscoceles_all_int3(self):
         result = get_triangle_type(3, 2, 3)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_float1(self):
         result = get_triangle_type(3.8, 2.61, 2.61)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_float2(self):
         result = get_triangle_type(3.87, 3.87, 2.75)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_float3(self):
         result = get_triangle_type(3.49, 2.84, 3.49)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_mix1(self):
         result = get_triangle_type(3.8, 3.8, 2)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_mix2(self):
         result = get_triangle_type(3.87, 3, 3.87)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_mix3(self):
         result = get_triangle_type(3, 2.84, 2.84)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_mix4(self):
         result = get_triangle_type(3, 3, 2.61)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_mix5(self):
         result = get_triangle_type(3.87, 2, 2)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_iscoceles_all_mix6(self):
         result = get_triangle_type(7, 2.84, 7)
         self.assertEqual(result, 'isosceles')
@@ -224,42 +248,52 @@ class TestGetTriangleType(TestCase):
         result = get_triangle_type(a, 14, a)
         self.assertEqual(result, 'invalid')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_equilateral_float_equals_int(self):
         result = get_triangle_type(1, 1.0, 1)
         self.assertEqual(result, 'equilateral')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_equalateral_large_int(self):
         result = get_triangle_type(548758458, 548758458, 548758458)
         self.assertEqual(result, 'equilateral')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_large_int(self):
         result = get_triangle_type(548758458, 548758456, 548758457)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_isosceles_large_int(self):
         result = get_triangle_type(548758458, 548758457, 548758458)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_equalateral_large_float(self):
         result = get_triangle_type(548758458156785.2, 548758458156785.2, 548758458156785.2)
         self.assertEqual(result, 'equilateral')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_large_float(self):
         result = get_triangle_type(548758458156785.75, 548758458156786.75, 548758458156784.75)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_isosceles_large_float(self):
         result = get_triangle_type(548758458156785.82, 548758458156785.82, 548758458156781.82)
         self.assertEqual(result, 'isosceles')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_equalateral_small_float(self):
         result = get_triangle_type(.0000000001, .0000000001, .0000000001)
         self.assertEqual(result, 'equilateral')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_scalene_small_float(self):
         result = get_triangle_type(.00000000011, .00000000013, .00000000014)
         self.assertEqual(result, 'scalene')
 
+    @requirements(['#0001', '#0002'])
     def test_get_triangle_isosceles_small_float(self):
         result = get_triangle_type(.00000000011, .00000000013, .00000000011)
         self.assertEqual(result, 'isosceles')
@@ -1572,10 +1606,12 @@ class TestGetTriangleType(TestCase):
 
 # testing for quadrilateral type
 
+    @requirements(['#0003'])
     def test_get_quadrilateral_type_rectangle_all_int(self):
         result = get_quadrilateral_type(1, 7, 1, 7, 90, 90, 90, 90)
         self.assertEqual(result, 'rectangle')
 
+    @requirements(['#0003'])
     def test_get_quadrilateral_type_square_all_int(self):
         result = get_quadrilateral_type(7, 7, 7, 7, 90, 90, 90, 90)
         self.assertEqual(result, 'square')
@@ -1608,46 +1644,57 @@ class TestGetTriangleType(TestCase):
         result = get_quadrilateral_type(1, 7, 1, 7, 90, 90, 90, 270)
         self.assertEqual(result, 'invalid')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_rectangle_all_long(self):
         result = get_quadrilateral_type(1.2, 7.1, 1.2, 7.1, 90, 90, 90, 90)
         self.assertEqual(result, 'rectangle')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_rectangle_mix1(self):
         result = get_quadrilateral_type(1, 7.1, 1, 7.1, 90, 90, 90, 90)
         self.assertEqual(result, 'rectangle')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_rectangle_mix2(self):
         result = get_quadrilateral_type(1.2, 7, 1.2, 7, 90, 90, 90, 90)
         self.assertEqual(result, 'rectangle')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_square_all_long(self):
         result = get_quadrilateral_type(7.896, 7.896, 7.896, 7.896, 90, 90, 90, 90)
         self.assertEqual(result, 'square')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_rectangle_too_long(self):
         result = get_quadrilateral_type(1, 7, 1.1, 7, 90, 90, 90, 90)
         self.assertEqual(result, 'disconnected')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_square_too_long(self):
         result = get_quadrilateral_type(7, 7, 7.1, 7, 90, 90, 90, 90)
         self.assertEqual(result, 'disconnected')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_square_too_short(self):
         result = get_quadrilateral_type(6.69, 7, 7, 7, 90, 90, 90, 90)
         self.assertEqual(result, 'disconnected')
 
+    @requirements(['#0003', '#0005'])
     def test_get_quadrilateral_type_square_angle_too_large(self):
         result = get_quadrilateral_type(7, 7, 7, 7, 90.3, 90, 90, 90)
         self.assertEqual(result, 'disconnected')
 
+    @requirements(['#0003', '#0005'])
     def test_get_quadrilateral_type_rectangle_angle_too_small(self):
         result = get_quadrilateral_type(1, 7, 1, 7, 90, 90, 89.7, 90)
         self.assertEqual(result, 'disconnected')
 
+    @requirements(['#0003'])
     def test_get_quadrilateral_type_rhombus_all_int(self):
         result = get_quadrilateral_type(7, 7, 7, 7, 70, 110, 70, 110)
         self.assertEqual(result, 'rhombus')
 
+    @requirements(['#0003', '#0004', '#0005'])
     def test_get_quadrilateral_type_rhombus_all_long(self):
         result = get_quadrilateral_type(7.31, 7.31, 7.31, 7.31, 110.25, 69.75, 110.25, 69.75)
         self.assertEqual(result, 'rhombus')
@@ -1778,15 +1825,18 @@ class TestGetTriangleType(TestCase):
         result = get_quadrilateral_type(1)
         self.assertEqual(result, 'invalid')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_square_large_long(self):
         a = 0xfffff + .0447
         result = get_quadrilateral_type(a, a, a, a, 90, 90, 90, 90)
         self.assertEqual(result, 'square')
 
+    @requirements(['#0003'])
     def test_get_quadrilateral_type_square_large_int(self):
         result = get_quadrilateral_type(0xfffff, 0xfffff, 0xfffff, 0xfffff, 90, 90, 90, 90)
         self.assertEqual(result, 'square')
 
+    @requirements(['#0003', '#0004'])
     def test_get_quadrilateral_type_square_small_long(self):
         a = .000000001
         result = get_quadrilateral_type(a, a, a, a, 90, 90, 90, 90)
