@@ -4,6 +4,7 @@
 		test_ask_question_with_no_answer2
 
 #0021: If no previous question has been asked the system shall respond with "Please ask a question first"
+
 		test_ask_question_with_no_answer2
 		test_correct_answer_for_no_question
 
@@ -206,4 +207,80 @@
 		test_ask_no_question_mark3
 		test_ask_no_question_mark4
 		test_ask_no_question_mark5
+
+What time is it?: 
+		test_ask_for_time
+
+What is the n digit of fibonacci?: 
+		test_ask_for_fibonacci_digit
+		test_ask_for_fibonacci_digit1
+		test_ask_for_fibonacci_digit2
+		test_ask_for_fibonacci_digit3
+		test_ask_for_fibonacci_digit4
+		test_ask_for_fibonacci_digit5
+		test_ask_for_fibonacci_digit6
+		test_ask_for_fibonacci_digit7
+
+What is the n digit of pi?: 
+		test_ask_for_pi_digit1
+		test_ask_for_pi_digit10
+		test_ask_for_pi_digit11
+		test_ask_for_pi_digit12
+		test_ask_for_pi_digit13
+		test_ask_for_pi_digit2
+		test_ask_for_pi_digit3
+		test_ask_for_pi_digit4
+		test_ask_for_pi_digit5
+		test_ask_for_pi_digit6
+		test_ask_for_pi_digit7
+		test_ask_for_pi_digit8
+		test_ask_for_pi_digit9
+
+Please clear memory: 
+		test_ask_for_clear_memory
+
+Open the door hal: 
+		test_ask_for_open_door
+
+Convert <number> <units> to <units>: 
+		test_ask_for_conversion1
+		test_ask_for_conversion10
+		test_ask_for_conversion2
+		test_ask_for_conversion3
+		test_ask_for_conversion4
+		test_ask_for_conversion5
+		test_ask_for_conversion6
+		test_ask_for_conversion7
+		test_ask_for_conversion8
+		test_ask_for_conversion9
+
+at least 10 different units: 
+		test_ask_for_conversion1
+		test_ask_for_conversion10
+		test_ask_for_conversion2
+		test_ask_for_conversion3
+		test_ask_for_conversion4
+		test_ask_for_conversion5
+		test_ask_for_conversion6
+		test_ask_for_conversion7
+		test_ask_for_conversion8
+		test_ask_for_conversion9
+
+Why did the chicken cross the road?: 
+		test_ask_for_chicken
+
+What is the <negative number> digit of fibonacci?: 
+		test_ask_for_fibonacci_negative_digit
+
+What is the <negative number or zero> digit of pi?: 
+		test_ask_for_pi_negative_digit
+		test_ask_for_pi_zero_digit
+
+What is n multiplied by m?: 
+		test_ask_for_n_time_m1
+		test_ask_for_n_time_m2
+		test_ask_for_n_time_m3
+
+What student really deserves an A?: 
+		test_ask_for_A
 
