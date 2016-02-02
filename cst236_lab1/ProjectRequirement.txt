@@ -41,8 +41,33 @@ for example When I ask "Please clear memory" I want the application to clear use
 for example When I say "Open the door hal", I want the application to say "I'm afraid I can't do that <user name>" so I know that is not an option
 for example When I ask "Convert <number> <units> to <units>" I want to receive the converted value and units so I can know the answer.
 for example When I ask for a numeric conversion I want "at least 10 different units" I can convert from/to
+for example when I ask "Convert <number> <set of units where at least one is not included>" I want the system to respond with "units are not recognized"
 for example when I ask "Why did the chicken cross the road?" I want the application to respond with "To prove to the armadillo that it can be done" so I can get a chuckle.
 for example when I ask "What is the <negative number> digit of fibonacci?" I want the system to respond "I cannot process a negative number" so that I realize my error.
 for example when I say "What is the <negative number or zero> digit of pi?" I want the system to respond with "The number must be greater than zero".
 for example when I ask "What is n multiplied by m?" I want the system to return n * m so I don't have to locate the calculator.
 for example when I ask "What student really deserves an A?" I want the system to say "Kirt Stark does!"
+for example when I ask "Question with no strings, maybe just numbers" the system will raise an exception that 'Not A String!' so I know that I need to enter a string.
+for example when I ask "Long Question with too many paramenters" the system will raise an exception that 'Too many extra parameters' so I know what the error is.
+for example when I ask "Convert <string number value> <units> to <units>" I really want the system to respond with "error in number value" so I understand why it didn't work
+for example when I ask "Convert <number> <units> to <units> with extra words" I want the system to respond with "incorrect number of words in conversion question" so I know why it didn't work
+
+!! this requirement is only to complete the coverage for a command statement that does not attach to a function.
+for example when I ask "Hal, take the garbage out." I want the system to respond with "I am busy right now, you do it." so I know it is my job, and not his.
+
+
+!! these requirements are for lab 3
+for example when I ask "What is the cube of n?" I want Hal to return the number cubed so I can calculate volumes of cubes.
+for example when I ask "What is the mass of a measure of <material> with a volume of <number> cubic meters?" I want Hal to calculate the mass in kilograms and return it so I know how heavy a product will be.
+for example when I ask "How many times will n divide completely into m?" I want Hal to return the number of times the second number divides into the first so I don't need to buy a calculator.
+for example when I ask "How many times will 0 divide completely into m?" I want Hal to return that "division by zero is not possible!"
+for example when I ask "How many times will n divide completely into 0?" I want Hal to return that "that is infinite"
+for example when I ask "What is n when it is multiplied by m and then added to x?" I want Hal to calculate the amount for me so I can figure my paycheck each week.
+for example when I ask "Why are these labs such a struggle for me?" I want Hal to give me a suggestion as to why so that I can improve my performance.
+
+
+
+
+
+
+

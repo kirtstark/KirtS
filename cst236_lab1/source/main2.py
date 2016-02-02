@@ -1,6 +1,7 @@
 from source.question_answer import QA
 from source.shape_checker import get_triangle_type, get_quadrilateral_type
-from source.question_answers import get_fibonacci, get_some_pi, get_the_door, convert_unit_to_unit, simple_multiply
+from source.question_answers import get_fibonacci, get_some_pi, get_the_door, convert_unit_to_unit, simple_multiply,\
+    cube_of_number, divide_evenly, paycheck, density_check, struggle_reason
 
 import difflib
 import time
@@ -25,7 +26,8 @@ class Interface(object):
 
         self.commands = {
             'Please clear memory': QA('Please clear memory', self.rebuild_question_answers_dictionary),
-            'Open the door hal': QA('Open the door hal', get_the_door)
+            'Open the door hal': QA('Open the door hal', get_the_door),
+            'Hal, take the garbage out.': QA('Hal, take the garbage out.', 'I am busy right now, you do it.')
         }
 
         self.last_question = None
@@ -38,12 +40,20 @@ class Interface(object):
             'What type of quadrilateral is ': QA('What type of quadrilateral is ', get_quadrilateral_type),
             'What time is it': QA('What time is it', time.asctime()),
             'What is the n digit of fibonacci': QA('What is the n digit of fibonacci', get_fibonacci),
-            'What is the n digit of pi': QA('What is the n digit of pi', get_some_pi),
+            'What is the digit of pi': QA('What is the digit of pi', get_some_pi),
             'Why did the chicken cross the road': QA('Why did the chicken cross the road', 'To prove to the '
                                                     'armadillo that it can be done'),
             'What is n multiplied by m': QA('What is n multiplied by m', simple_multiply),
-            'What student really deserves an A': QA('What student really deserves an A', 'Kirt Stark does!')
-
+            'What student really deserves an A': QA('What student really deserves an A', 'Kirt Stark does!'),
+            'What is the cube of ': QA('What is the cube of ', cube_of_number),
+            'How many times will divide completely into ': QA('How many times will divide completely into ',
+                                                            divide_evenly),
+            'What is when it is multiplied by and then added to ': QA('What is when it is'
+                                                    ' multiplied by and then added to ', paycheck),
+            'What is the mass of a measure of with a volume of cubic meters?': QA('What is the mass of a measure of'
+                                                    ' with a volume of cubic meters?', self.send_for_density),
+            'Why are these labs such a struggle for me': QA('Why are these labs such a struggle for me',
+                                                            struggle_reason)
         }
 
     def ask(self, question=""):
@@ -127,3 +137,8 @@ class Interface(object):
 
         return convert_unit_to_unit(num, words[2].strip(' '), words[4].strip(' '))
 
+    def send_for_density(self, vol=0):
+        words = []
+        words = self.last_question.split(' ')
+
+        return density_check(words[8], vol)

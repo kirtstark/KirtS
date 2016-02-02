@@ -253,6 +253,9 @@ Convert <number> <units> to <units>:
 		test_ask_for_conversion7
 		test_ask_for_conversion8
 		test_ask_for_conversion9
+		test_ask_for_conversion_with_unknown_unit1
+		test_ask_for_conversion_with_unknown_unit2
+		test_ask_for_conversion_with_unknown_unit3
 
 at least 10 different units: 
 		test_ask_for_conversion1
@@ -265,6 +268,11 @@ at least 10 different units:
 		test_ask_for_conversion7
 		test_ask_for_conversion8
 		test_ask_for_conversion9
+
+Convert <number> <set of units where at least one is not included>: 
+		test_ask_for_conversion_with_unknown_unit1
+		test_ask_for_conversion_with_unknown_unit2
+		test_ask_for_conversion_with_unknown_unit3
 
 Why did the chicken cross the road?: 
 		test_ask_for_chicken
@@ -283,4 +291,66 @@ What is n multiplied by m?:
 
 What student really deserves an A?: 
 		test_ask_for_A
+
+Question with no strings, maybe just numbers: 
+		test_ask_for_nothing
+		test_ask_for_too_much
+		test_demand_too_much
+
+Long Question with too many paramenters: 
+
+Convert <string number value> <units> to <units>: 
+		test_ask_conversion_with_string_number
+
+Convert <number> <units> to <units> with extra words: 
+		test_ask_conversion_with_too_many_words
+
+Hal, take the garbage out.: 
+		test_check_direct_command_response
+
+What is the cube of n?: 
+		test_calculate_cube_of_number1
+		test_calculate_cube_of_number2
+		test_calculate_cube_of_number3
+		test_calculate_cube_of_number4
+		test_calculate_cube_of_number5
+		test_calculate_cube_of_number6
+
+What is the mass of a measure of <material> with a volume of <number> cubic meters?: 
+		test_calculate_mass1
+		test_calculate_mass2
+		test_calculate_mass3
+		test_calculate_mass4
+		test_calculate_mass5
+		test_calculate_mass6
+		test_calculate_mystery_mass
+
+How many times will n divide completely into m?: 
+		test_find_divosor1
+		test_find_divosor2
+		test_find_divosor3
+		test_find_divosor4
+		test_find_divosor5
+		test_find_divosor6
+
+How many times will 0 divide completely into m?: 
+
+How many times will n divide completely into 0?: 
+
+What is n when it is multiplied by m and then added to x?: 
+		test_calculate_paycheck1
+		test_calculate_paycheck2
+		test_calculate_paycheck3
+		test_calculate_paycheck4
+		test_calculate_paycheck5
+		test_calculate_paycheck6
+		test_calculate_paycheck7
+
+Why are these labs such a struggle for me?: 
+		test_struggle1
+		test_struggle2
+		test_struggle3
+		test_struggle4
+		test_struggle5
+		test_struggle6
 

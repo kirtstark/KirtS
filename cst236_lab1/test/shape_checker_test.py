@@ -339,6 +339,10 @@ class TestGetTriangleType(TestCase):
         result = get_triangle_type(98.6)
         self.assertEqual(result, 'invalid')
 
+    def test_get_triangle_all_null_values(self):
+        result = get_triangle_type()
+        self.assertEqual(result, 'invalid')
+
 # lists
 
     def test_get_triangle_equilateral_all_int_list(self):

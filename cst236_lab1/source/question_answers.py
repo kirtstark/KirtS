@@ -7,6 +7,7 @@ The following example code provides story question answers
 
 import math
 import getpass
+from source.question_answer import Reason
 
 def get_fibonacci(a=0):
     """
@@ -50,17 +51,14 @@ def get_some_pi(n=0):
     :return: nth digit number
     :rtype: int
     """
-
     if n <= 0:
         return 'The number must be greater than zero'
 
-    if n > 12:
+    elif n > 12:
         return 'taken too far'
 
-    try:
+    else:
         return int(str(math.pi).replace('.', '')[int(round(n)) - 1])
-    except ValueError:
-        return "error in digit"
 
 
 def get_the_door():
@@ -78,7 +76,7 @@ def get_the_door():
 
 def convert_unit_to_unit(x=0, unit1='', unit2=''):
     """
-    returns a string response with the username taken from the open account
+    returns a number value of the converted unit
 
     :param x: line x
     :type x: float
@@ -151,5 +149,94 @@ def simple_multiply(n=0, m=0):
     :return: a float value of m * n
     :rtype: float
     """
-    print "he is fallen"
     return m * n
+
+
+def cube_of_number(x=0):
+    """
+    returns the cube of the number
+
+    :param x: line x
+    :type x: float
+
+    :return: a float value of the cube of the number
+    :rtype: float
+    """
+    return x * x * x
+
+def divide_evenly(a=0, b=0):
+    """
+    returns the even divisor
+
+    :param a: line a
+    :type a: float
+
+    :param b: line b
+    :type b: float
+
+    :return: a float value of the evenly divided number a divided by b
+    :rtype: float
+    """
+
+    if b == 0:
+        return "that is infinite"
+
+    elif a == 0:
+        return "division by zero is not possible!"
+
+    else:
+        divided = b/a
+        if divided > 0:
+            return math.floor(divided)
+        else:
+            return math.ceil(divided)
+
+def paycheck(x=0, y=0, z=0):
+    """
+    returns the multiplication of x and y added to z
+
+    :param x: line x
+    :type x: float
+
+    :param y: line y
+    :type y: float
+
+    :param z: line z
+    :type z: float
+
+    :return: a float value of x times y plus z
+    :rtype: float
+    """
+
+    return x * y + z
+
+def density_check(material='', vol=0):
+    """
+    returns the mass of the given material at the given volume (d*v)
+    :param material: string
+
+    :param vol: float
+
+    :return: float
+    """
+
+    densities = {'helium': .179, 'aerographite': .2, 'cork': 240, 'pine': 373, 'lithium': 535, 'oak': 710,
+                 'potassium': 860, 'sodium': 970, 'water': 1000, 'plastic': 1175, 'magnesium': 1740, 'beryllium': 1850,
+                 'silicon': 2330, 'aluminium': 2700, 'diamond': 3500,'titanium': 4540, 'zine': 7000}
+
+    lower_material = material.lower()
+
+    for m in densities:
+        if lower_material == m:
+            return vol * densities[m]
+
+    return "unfamiliar material"
+
+def struggle_reason():
+    """
+    returns a string offering a reason why these labs are so hard. chosen randomly.
+    :return: string
+    """
+
+    reason = Reason()
+    return reason.get_reason()

@@ -149,11 +149,11 @@ def get_quadrilateral_type(a=0, b=0, c=0, d=0, angle_d_a=0, angle_a_b=0, angle_b
     diag = sqrt(a**2 + d**2 - 2*a*d*cos(radians(angle_d_a)))
 
     cosangle = (diag**2 + a**2 - d**2)/(2*diag*a)
-    if cosangle > 1 or cosangle < -1:
-        return "disconnected"
+    #if cosangle > 1 or cosangle < -1:
+    #    return "disconnected"
     tempangle = angle_a_b - degrees(acos(cosangle))
-    if tempangle <= 0:
-        return "disconnected"
+    #if tempangle <= 0:
+    #    return "disconnected"
     c2 = diag*sin(radians(tempangle))/sin(radians(angle_b_c))
 
     # using a range to account for math rounding errors
