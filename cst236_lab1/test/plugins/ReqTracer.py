@@ -54,7 +54,7 @@ def story(story_list):
 
 with open('ProjectRequirement.txt') as f:
     for line in f.readlines():
-        if '#00' in line:
+        if '#0' in line:
             req_id, desc = line.split(' ', 1)
             Requirements[req_id] = RequirementTrace(desc)
         elif 'for example' in line:

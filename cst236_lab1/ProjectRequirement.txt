@@ -65,6 +65,28 @@ for example when I ask "How many times will n divide completely into 0?" I want 
 for example when I ask "What is n when it is multiplied by m and then added to x?" I want Hal to calculate the amount for me so I can figure my paycheck each week.
 for example when I ask "Why are these labs such a struggle for me?" I want Hal to give me a suggestion as to why so that I can improve my performance.
 
+!! here are the stories from lab 5
+
+#0100 The system shall return 'Yes' or 'No' when asked 'Is the <file path> in the repo?'
+#0101 The system shall return one of the following when asked 'What is the status of <file path>?'
+
+         - <file path> has been modified locally
+
+         - <file path> has not been checked in
+
+         - <file path> is a dirty repo
+
+         - <file path> is up to date
+
+#0102 The system shall return '<hash>, <date modified>, <author>' when asked 'What is the deal with <file path>?'
+
+#0103 The system shall return the repo branch when asked 'What branch is <file path>?'
+
+#0104 The system shall return the repo url when asked 'Where did <file path> come from?'
+
+#0105 The system shall return the repo root when asked 'What is the repo root for <file path>?'
+
+#0106 The system shall return an error if asked 'What is the status of <file path>' with a non existent path name.
 
 
 

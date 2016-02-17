@@ -240,3 +240,4 @@ def struggle_reason():
 
     reason = Reason()
     return reason.get_reason()
+

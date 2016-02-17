@@ -292,12 +292,12 @@ class TestQuestionAnswer(TestCase):
         questions = Interface()
         inquiry = 'What type of quadrilateral is 2 2 2 2' + chr(0x3F)
         result = questions.ask(inquiry)
-        self.assertEqual(result, 'square')
+        self.assertEqual(result, 'invalid')
 
     @requirements(['#0012', '#0013'])
     def test_ask_valid_quadrilateral_question2(self):
         questions = Interface()
         inquiry = 'What type of quadrilateral is 2 3 2 3' + chr(0x3F)
         result = questions.ask(inquiry)
-        self.assertEqual(result, 'rectangle')
+        self.assertEqual(result, 'invalid')
 

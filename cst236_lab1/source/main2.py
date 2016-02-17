@@ -2,6 +2,7 @@ from source.question_answer import QA
 from source.shape_checker import get_triangle_type, get_quadrilateral_type
 from source.question_answers import get_fibonacci, get_some_pi, get_the_door, convert_unit_to_unit, simple_multiply,\
     cube_of_number, divide_evenly, paycheck, density_check, struggle_reason
+from git_utils import is_file_in_repo, get_git_file_info, get_file_info, get_repo_branch, get_repo_url, get_repo_root
 
 import difflib
 import time
@@ -18,8 +19,9 @@ class Interface(object):
         self.where_dict = {}
         self.who_dict = {}
         self.question_answers = {}
+        self.file_name = ''
 
-        self.keywords = ['How', 'What', 'Where', 'Who', "Why"]
+        self.keywords = ['How', 'What', 'Where', 'Who', "Why", "Is"]
         self.question_mark = chr(0x3F)
 
         self.rebuild_question_answers_dictionary()
@@ -53,7 +55,13 @@ class Interface(object):
             'What is the mass of a measure of with a volume of cubic meters?': QA('What is the mass of a measure of'
                                                     ' with a volume of cubic meters?', self.send_for_density),
             'Why are these labs such a struggle for me': QA('Why are these labs such a struggle for me',
-                                                            struggle_reason)
+                                                            struggle_reason),
+            'Is the <file name> in the repo': QA('Is the in the repo', is_file_in_repo),
+            'What is the status of <file name>': QA('What is the status of ', get_git_file_info),
+            'What is the deal with <file name>': QA ('What is the deal with ', get_file_info),
+            'What branch is <file path>': QA('What branch is ', get_repo_branch),
+            'Where did <file path> come from': QA('Where did come from', get_repo_url),
+            'What is the repo root for <file path>': QA('What is the repo root for ', get_repo_root)
         }
 
     def ask(self, question=""):
@@ -93,6 +101,18 @@ class Interface(object):
                 except:
                     parsed_question += "{0} ".format(keyword)
             parsed_question = parsed_question[0:-1]
+            self.file_name = ''
+            split_parsed_question = parsed_question.split(' ')
+            for wordy in split_parsed_question:
+                file_word_list = wordy.strip('.')
+                file_word_list = file_word_list.split('.')
+                if file_word_list.__len__() > 1:
+                    args.append(wordy)
+                    split_parsed_question.remove(wordy)
+                    parsed_question = ''
+                    for each_word in split_parsed_question:
+                        parsed_question += "{0} ".format(each_word)
+                    parsed_question = parsed_question[0:-1]
             self.last_question = parsed_question
             for answer in self.question_answers.values():
                 if difflib.SequenceMatcher(a=answer.question, b=parsed_question).ratio() >= .90:
@@ -142,3 +162,4 @@ class Interface(object):
         words = self.last_question.split(' ')
 
         return density_check(words[8], vol)
+
