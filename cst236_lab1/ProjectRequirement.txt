@@ -88,6 +88,12 @@ for example when I ask "Why are these labs such a struggle for me?" I want Hal t
 
 #0106 The system shall return an error if asked 'What is the status of <file path>' with a non existent path name.
 
+#0050 When asked a question the system shall output the question to a log file
+
+#0051 When asked a question the system shall output the answer to a log file
+
+#0052 The system shall output questions and answers to the log file in under 50 ms
+
 
 
 

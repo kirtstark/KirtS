@@ -25,7 +25,7 @@ class TestStoryQuestionAnswer(TestCase):
     question2 = 'What type of quadrilateral is '
     newAnswer1 = 'Your keys are under the sofa'
     newAnswer2 = 'At least seven ways'
-    newAnswer3 = 'It is possible threre are eigth ways'
+    newAnswer3 = 'It is possible there are eight ways'
 
 #   all we have is time
     @story(['What time is it?'])
@@ -203,7 +203,6 @@ class TestStoryQuestionAnswer(TestCase):
         self.assertEqual(result, self.newAnswer1)
         inquiry = "Please clear memory"
         result = questions.ask(inquiry)
-        print result
         inquiry = self.keyWord3 + ' are my car keys' + chr(0x3F)
         result = questions.ask(inquiry)
         self.assertEqual(result, self.response2)
@@ -214,9 +213,7 @@ class TestStoryQuestionAnswer(TestCase):
         questions = Interface()
         inquiry = 'Open the door hal'
         result = questions.ask(inquiry)
-        username = getpass.getuser()
-        print username
-        response = 'I\'m afraid I can\'t do that ' + username
+        response = 'I\'m afraid I can\'t do that ' + getpass.getuser()
         self.assertEqual(result, response)
 
 #   inspiring conversion stories

@@ -243,6 +243,36 @@
 		test_ask_valid_triangle_question5
 		test_ask_valid_triangle_question6
 
+#0051: When asked a question the system shall output the answer to a log file
+
+		test_ask_for_clear_memory_performance
+		test_ask_for_conversion_performance
+		test_ask_for_conversion_with_unknown_unit_performance
+		test_ask_for_fibonacci_digit_performance
+		test_ask_for_pi_digit10
+		test_ask_valid_quadrilateral_question_performance1
+		test_ask_valid_triangle_question_performance
+
+#0050: When asked a question the system shall output the question to a log file
+
+		test_ask_for_clear_memory_performance
+		test_ask_for_conversion_performance
+		test_ask_for_conversion_with_unknown_unit_performance
+		test_ask_for_fibonacci_digit_performance
+		test_ask_for_pi_digit10
+		test_ask_valid_quadrilateral_question_performance1
+		test_ask_valid_triangle_question_performance
+
+#0052: The system shall output questions and answers to the log file in under 50 ms
+
+		test_ask_for_clear_memory_performance
+		test_ask_for_conversion_performance
+		test_ask_for_conversion_with_unknown_unit_performance
+		test_ask_for_fibonacci_digit_performance
+		test_ask_for_pi_digit10
+		test_ask_valid_quadrilateral_question_performance1
+		test_ask_valid_triangle_question_performance
+
 #0019: The system shall provide a means of updating an answer to the previously asked question.
 
 		test_ask_question_with_no_answer2

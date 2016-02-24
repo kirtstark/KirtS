@@ -20,6 +20,7 @@ class Interface(object):
         self.who_dict = {}
         self.question_answers = {}
         self.file_name = ''
+        self.result_out = open('QAFile.txt', 'a')
 
         self.keywords = ['How', 'What', 'Where', 'Who', "Why", "Is"]
         self.question_mark = chr(0x3F)
@@ -33,6 +34,15 @@ class Interface(object):
         }
 
         self.last_question = None
+
+    def __del__(self):
+        self.result_out.close()
+
+    def closing(self):
+        self.result_out.close()
+
+    def opening(self):
+        self.result_out = open('QAFile.txt', 'a')
 
     def rebuild_question_answers_dictionary(self):
         self.question_answers.clear()
@@ -63,11 +73,14 @@ class Interface(object):
             'Where did <file path> come from': QA('Where did come from', get_repo_url),
             'What is the repo root for <file path>': QA('What is the repo root for ', get_repo_root)
         }
+        return "done"
 
     def ask(self, question=""):
         if not isinstance(question, str):
             self.last_question = None
             raise Exception('Not A String!')
+        self.result_out.write(question)
+        self.result_out.write('\n')
         if question[-1] != self.question_mark or question.split(' ')[0] not in self.keywords:
             self.last_question = None
             parsed_question = ""
@@ -80,17 +93,29 @@ class Interface(object):
             parsed_question = parsed_question[0:-1]
             first_word = parsed_question[0:8].lower().__str__()
             if first_word == 'convert ':
-                return self.send_for_conversion(question)
+                theAnswer = self.send_for_conversion(question)
+                self.result_out.write(str(theAnswer))
+                self.result_out.write('\n\n')
+                return theAnswer
             for answer in self.commands.values():
                 if difflib.SequenceMatcher(a=answer.question, b=parsed_question).ratio() >= .90:
                     if answer.function is None:
+                        self.result_out.write(str(answer.value))
+                        self.result_out.write('\n\n')
                         return answer.value
                     else:
                         try:
-                            return answer.function(*args)
+                            theAnswer = answer.function(*args)
+                            self.result_out.write(str(theAnswer))
+                            self.result_out.write('\n\n')
+                            return theAnswer
                         except:
+                            self.result_out.write("I have no response for that")
+                            self.result_out.write('\n\n')
                             raise Exception("Too many extra parameters")
             else:
+                self.result_out.write(NOT_A_QUESTION_RETURN)
+                self.result_out.write('\n\n')
                 return NOT_A_QUESTION_RETURN
         else:
             parsed_question = ""
@@ -117,13 +142,22 @@ class Interface(object):
             for answer in self.question_answers.values():
                 if difflib.SequenceMatcher(a=answer.question, b=parsed_question).ratio() >= .90:
                     if answer.function is None:
+                        self.result_out.write(str(answer.value))
+                        self.result_out.write('\n\n')
                         return answer.value
                     else:
                         try:
-                            return answer.function(*args)
+                            theAnswer = answer.function(*args)
+                            self.result_out.write(str(theAnswer))
+                            self.result_out.write('\n\n')
+                            return theAnswer
                         except:
+                            self.result_out.write("I have no response for that")
+                            self.result_out.write('\n\n')
                             raise Exception("Too many extra parameters")
             else:
+                self.result_out.write(UNKNOWN_QUESTION)
+                self.result_out.write('\n\n')
                 return UNKNOWN_QUESTION
 
     def teach(self, answer=""):
