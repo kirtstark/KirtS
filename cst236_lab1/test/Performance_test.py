@@ -29,9 +29,10 @@ class TestPerformance(TestCase):
     def test_ask_valid_quadrilateral_question_performance1(self):
         questions = Interface()
         inquiry = 'What type of quadrilateral is 2 2 2 2' + chr(0x3F)
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
+        print timming
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -44,9 +45,9 @@ class TestPerformance(TestCase):
     def test_ask_valid_triangle_question_performance(self):
         questions = Interface()
         inquiry = 'What type of triangle is 2.98 2.98 2.98' + chr(0x3F)
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -59,9 +60,9 @@ class TestPerformance(TestCase):
     def test_ask_for_fibonacci_digit_performance(self):
         questions = Interface()
         inquiry = "What is the 7 digit of fibonacci?"
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -74,9 +75,9 @@ class TestPerformance(TestCase):
     def test_ask_for_conversion_performance(self):
         questions = Interface()
         inquiry = "Convert 5.6 quarts to liters"
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -89,9 +90,9 @@ class TestPerformance(TestCase):
     def test_ask_for_conversion_with_unknown_unit_performance(self):
         questions = Interface()
         inquiry = "Convert 8745 tickles to miles"
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -104,9 +105,9 @@ class TestPerformance(TestCase):
     def test_ask_for_clear_memory_performance(self):
         questions = Interface()
         inquiry = 'Where are my car keys' + chr(0x3F)
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -117,9 +118,9 @@ class TestPerformance(TestCase):
         self.assertEqual(result, self.response2)
         questions.opening()
         questions.teach(self.newAnswer1)
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -130,9 +131,9 @@ class TestPerformance(TestCase):
         self.assertEqual(result, self.newAnswer1)
         questions.opening()
         inquiry = "Please clear memory"
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -142,9 +143,9 @@ class TestPerformance(TestCase):
         self.assertEqual(qas[-3].strip(), inquiry)
         questions.opening()
         inquiry = self.keyWord3 + ' are my car keys' + chr(0x3F)
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()
@@ -158,9 +159,9 @@ class TestPerformance(TestCase):
     def test_ask_for_pi_digit10(self):
         questions = Interface()
         inquiry = "What is the 10 digit of pi?"
-        start = time.time()
+        start = time.clock()
         result = questions.ask(inquiry)
-        timming = time.time() - start
+        timming = time.clock() - start
         questions.closing()
         with open('QAFile.txt', 'r') as inFile:
             qas = inFile.readlines()

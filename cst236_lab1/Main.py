@@ -1,3 +1,9 @@
+"""
+:mod:`source.Main`
+============================================
+Entrance module to testing programs
+"""
+
 import nose2
 
 with open('QAFile.txt', 'w') as outFile:

@@ -1,3 +1,9 @@
+"""
+:mod:`ReqTracer`
+============================================
+Used by tests to connect tests with requirements
+"""
+
 from nose2.events import Plugin
 
 

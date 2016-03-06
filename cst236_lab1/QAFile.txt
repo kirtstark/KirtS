@@ -1,5 +1,53 @@
 Questions and Answers
 
+What is the deal with source/main2.py?
+#333  February 16  Kirt Stark
+
+What is the status of source/main2.py?
+main2.py has been modified locally
+
+What is the status of source/main2.py?
+main2.py has been modified locally
+
+What is the status of source/main2.py?
+main2.py has been modified locally
+
+What is the status of source/main2.py?
+main2.py has been not been checked in
+
+What is the status of source/main2.py?
+main2.py is up to date
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+What is the status of source/main3.py?
+I have no response for that
+
+What branch is source/main2.py?
+KirtS
+
+What is the repo root for C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py?
+https:\github.com\OregonTech\KirtS
+
+Where did C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py come from ?
+https://github.com/OregonTech/KirtS
+
+Is the source/main2.py in the repo?
+Yes
+
+Is the source/main3.py in the repo?
+No
+
+Is the source/main2.py in the repo?
+No
+
+Is the source/main2.py in the repo?
+Yes
+
+Is the source/main2.py in the repo?
+No
+
 Where are my car keys?
 I don't know, please provide the answer
 
@@ -30,71 +78,8 @@ invalid
 What type of triangle is 2.98 2.98 2.98?
 equilateral
 
-What is the deal with source/main2.py?
-#333  February 16  Kirt Stark
-
-What is the status of source/main2.py?
-main2.py has been modified locally
-
-What is the status of source/main2.py?
-main2.py has been modified locally
-
-What is the status of source/main2.py?
-main2.py has been modified locally
-
-What is the status of source/main2.py?
-main2.py has been not been checked in
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
-
-What is the status of source/main2.py?
-main2.py is up to date
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
-
-What is the status of source/main3.py?
-I have no response for that
-
-What branch is source/main2.py?
-KirtS
-
-What is the repo root for C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py?
-https:\github.com\OregonTech\KirtS
-
-Where did C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py come from ?
-https://github.com/OregonTech/KirtS
-
 Is the source/main2.py in the repo?
 Yes
-
-Is the source/main3.py in the repo?
-No
-
-Is the source/main2.py in the repo?
-No
-
-Is the source/main2.py in the repo?
-No
-
-Is the source/main2.py in the repo?
-Yes
-
-Is the source/main2.py in the repo?
-No
-
-Is the source/main2.py in the repo?
-Yes
-
-any given question
-Was that a question?
 
 How ?
 I don't know, please provide the answer
@@ -136,6 +121,21 @@ Whatis this a question
 Was that a question?
 
 Whereis this a question
+Was that a question?
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+Is the source/main2.py in the repo?
+No
+
+any given question
 Was that a question?
 
 Whyis this a question
@@ -195,9 +195,6 @@ equilateral
 What type of triangle is 2 3 2?
 isosceles
 
-What type of triangle is 5 3 2?
-scalene
-
 What type of triangle is 2.98 2.98 2.98?
 equilateral
 
@@ -212,9 +209,6 @@ error in number value
 
 Convert 3574 feet to whatever miles
 incorrect number of words in conversion question
-
-What student really deserves an A?
-Kirt Stark does!
 
 Why did the chicken cross the road?
 To prove to the armadillo that it can be done
@@ -235,7 +229,7 @@ Convert 3.2 centimeters to inches
 1.259842528
 
 Convert 8745 feet to miles
-1.65625
+1.65624991785
 
 Convert 4.8 inches to centimeters
 12.1919999195
@@ -265,9 +259,6 @@ Convert 8745 tickles to miles
 units are not recognized
 
 Convert 8745 tickles to sneezes
-units are not recognized
-
-Convert 8745 feet to sneezes
 units are not recognized
 
 What is the 0 digit of fibonacci?
@@ -305,9 +296,6 @@ What is 8 multiplied by 6?
 
 What is 4.5 multiplied by 7.6?
 34.2
-
-Open the door hal
-I'm afraid I can't do that Devon
 
 What is the 1 digit of pi?
 3
@@ -348,14 +336,11 @@ What is the 8 digit of pi?
 What is the 9 digit of pi?
 5
 
-What is the -11 digit of pi?
-The number must be greater than zero
-
 What is the 0 digit of pi?
 The number must be greater than zero
 
 What time is it?
-Wed Feb 24 07:47:17 2016
+Sun Mar 06 14:28:02 2016
 
 What is the 7  87 digit of fibonacci?
 I have no response for that
@@ -389,9 +374,6 @@ What is the mass of a measure of silicon with a volume of 14.5 cubic meters?
 
 What is the mass of a measure of aluminium with a volume of 32.64 cubic meters?
 88128.0
-
-What is the mass of a measure of diamond with a volume of 2.24789 cubic meters?
-7867.615
 
 What is the mass of a measure of titanium with a volume of 18.6 cubic meters?
 84444.0
@@ -435,30 +417,48 @@ division by zero is not possible!
 How many times will 1 divide completely into 32?
 32.0
 
-How many times will 2 divide completely into 1000?
-500.0
-
 How many times will -7 divide completely into 25?
 -3.0
 
 How many times will 8 divide completely into 0?
-that is infinite
+0
 
 Why are these labs such a struggle for me?
-I do not know.
+Too much goofing off
 
 Why are these labs such a struggle for me?
-Have you considered studying?
+Too much goofing off
 
 Why are these labs such a struggle for me?
-Brain damage. Definitely brain damage.
+Alien abduction.
+
+Why are these labs such a struggle for me?
+Too much goofing off
 
 Why are these labs such a struggle for me?
 It is supposed to be difficult, that is how you learn
 
 Why are these labs such a struggle for me?
-Brain damage. Definitely brain damage.
+Um, how much have you had to drink?
 
-Why are these labs such a struggle for me?
-Brain damage. Definitely brain damage.
+What student really deserves an A?
+Kirt Stark does!
+
+Convert 8745 feet to sneezes
+units are not recognized
+
+Open the door hal
+I'm afraid I can't do that Devon
+
+What is the -11 digit of pi?
+The number must be greater than zero
+
+What is the mass of a measure of diamond with a volume of 2.24789 cubic meters?
+7867.615
+
+How many times will 2 divide completely into 1000?
+500.0
+
+What type of triangle is 5 3 2?
+scalene
 

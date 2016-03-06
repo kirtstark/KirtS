@@ -1,14 +1,32 @@
+"""
+:mod:`source.git_utils` -- git hub utilities
+============================================
+"""
+
 import logging
 import subprocess
 import os
 from functools import wraps
 
-git_logger = logging.getLogger(__name__)
+GIT_LOGGER = logging.getLogger(__name__)
 
 
 def check_valid_path(func):
+    """
+    checks to see if the path exists
+
+    :param func: function
+    :return: function results
+    """
     @wraps(func)
     def path_checker(path, *args, **kwargs):
+        """
+        Checks the path
+        :param path: string path name
+        :param args: arguments
+        :param kwargs: k arguments
+        :return: string function results
+        """
         if not os.path.exists(path):
             raise Exception('Path {0} does not exist cannot get git file '
                             'info'.format(path))
@@ -17,11 +35,19 @@ def check_valid_path(func):
 
 
 def is_file_in_repo(path):
+    """
+    Checks to see if the file name in path exists in the repo
+
+    :param path: path to the file
+    :type path: str
+
+    :return string
+    """
     # File must exist to be in the repo
     print '*****************************************'
     print path
     if not os.path.exists(path):
-        git_logger.debug('%s does not exist therefore not in repo', path)
+        GIT_LOGGER.debug('%s does not exist therefore not in repo', path)
         return 'No'
     if not os.path.isabs(path):
         path = os.path.abspath(path)
@@ -29,7 +55,7 @@ def is_file_in_repo(path):
     print test_repo
     if(path in get_diff_files(test_repo) or
        path in get_untracked_files(test_repo)):
-        git_logger.debug('%s changed or is untracked in repo %s', path, test_repo)
+        GIT_LOGGER.debug('%s changed or is untracked in repo %s', path, test_repo)
         return 'No'
     return 'Yes'
 
@@ -49,13 +75,13 @@ def get_git_file_info(path):
         path = os.path.abspath(path)
     test_repo = os.path.dirname(path)
     if path in get_diff_files(test_repo):
-        git_logger.warning('%s is modified locally', path)
+        GIT_LOGGER.warning('%s is modified locally', path)
         return '{} has been modified locally'.format(os.path.basename(path))
     elif path in get_untracked_files(test_repo):
-        git_logger.warning('%s is not checked in', path)
+        GIT_LOGGER.warning('%s is not checked in', path)
         return '{} has been not been checked in'.format(os.path.basename(path))
     elif is_repo_dirty(test_repo, include_untracked=True):
-        git_logger.warning('%s is contained in a dirty repo', path)
+        GIT_LOGGER.warning('%s is contained in a dirty repo', path)
         return '{} is a dirty repo'.format(os.path.basename(path))
 
     return '{} is up to date'.format(os.path.basename(path))
@@ -117,15 +143,12 @@ def has_untracked_files(path):
 
 
 @check_valid_path
-def get_file_info(path, full=False):
+def get_file_info(path):
     """
     Get the last commit information for the file specified
 
     :param path: path to the file to check
     :type path: str
-
-    :param full: full info or just the hash
-    :type full: bool
 
     :return: file info string
     :rtype: str
@@ -254,16 +277,16 @@ def git_execute(params=None, path=os.getcwd()):
     :return: The stdout from git
     :rtype: str
     """
-    p = subprocess.Popen(params,
-                         stdout=subprocess.PIPE,
-                         stderr=subprocess.PIPE, cwd=path,
-                         universal_newlines=True)
+    process_sub = subprocess.Popen(params,
+                                   stdout=subprocess.PIPE,
+                                   stderr=subprocess.PIPE, cwd=path,
+                                   universal_newlines=True)
 
-    stdout, stderr = p.communicate()
+    stdout, stderr = process_sub.communicate()
 
 
     if stderr:
-        git_logger.error('Error occurred when executing git command(%s): %s', params,
+        GIT_LOGGER.error('Error occurred when executing git command(%s): %s', params,
                          stderr.strip())
 
     return stdout.strip()

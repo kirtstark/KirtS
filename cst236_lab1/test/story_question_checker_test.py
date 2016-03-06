@@ -590,7 +590,7 @@ class TestStoryQuestionAnswer(TestCase):
         questions = Interface()
         inquiry = "How many times will 8 divide completely into 0?"
         result = questions.ask(inquiry)
-        self.assertEqual(result, "that is infinite")
+        self.assertEqual(result, 0)
 
     @story(['What is n when it is multiplied by m and then added to x?'])
     def test_calculate_paycheck1(self):
