@@ -59,9 +59,9 @@ for example when I ask "Hal, take the garbage out." I want the system to respond
 !! these requirements are for lab 3
 for example when I ask "What is the cube of n?" I want Hal to return the number cubed so I can calculate volumes of cubes.
 for example when I ask "What is the mass of a measure of <material> with a volume of <number> cubic meters?" I want Hal to calculate the mass in kilograms and return it so I know how heavy a product will be.
-for example when I ask "How many times will n divide completely into m?" I want Hal to return the number of times the second number divides into the first so I don't need to buy a calculator.
+for example when I ask "How many times will n divide completely into m?" I want Hal to return the number of times the first number divides into the second so I don't need to buy a calculator.
 for example when I ask "How many times will 0 divide completely into m?" I want Hal to return that "division by zero is not possible!"
-for example when I ask "How many times will n divide completely into 0?" I want Hal to return that "that is infinite"
+for example when I ask "How many times will n divide completely into 0?" I want Hal to return 0
 for example when I ask "What is n when it is multiplied by m and then added to x?" I want Hal to calculate the amount for me so I can figure my paycheck each week.
 for example when I ask "Why are these labs such a struggle for me?" I want Hal to give me a suggestion as to why so that I can improve my performance.
 

@@ -5,7 +5,7 @@
 # disabling for bare exceptions, as not all exceptions need to throw exceptions
 # disabling too many instance attributes - all attributes
 # are needed and used
-# disabling else clause in loop without break - return statement
+# disabling else clause in loop without break - return statements
 # are used instead of breaking the loop
 # pylint: disable=W0702, R0902, W0120
 

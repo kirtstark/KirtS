@@ -1,3 +1,5 @@
+from mock.mock import self
+
 from source.main2 import *
 import mock
 from unittest import TestCase
@@ -6,10 +8,12 @@ import os
 
 
 class TestMockingGit(TestCase):
+    """ class to test mocking objects in Python"""
 
-    good = 'C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py'
+    current_file = (str(os.getcwd())) + '\\source\\main2.py'
+    good = current_file
     normal = ('return nothing', None)
-    found = ('C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py', None)
+    found = (current_file, None)
     empty = ('', None)
     missing = (None, None)
 
