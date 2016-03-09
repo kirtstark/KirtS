@@ -10,7 +10,9 @@ import os
 class TestMockingGit(TestCase):
     """ class to test mocking objects in Python"""
 
-    current_file = (str(os.getcwd())) + '\\source\\main2.py'
+#    current_file = (str(os.getcwd())) + '\\source\\main2.py'
+#    current_file = 'C:\\Users\\Devon\\Documents\\GitHub\\Kirt.Stark\\KirtS\\cst236_lab1\\source\\main2.py'
+    current_file = '/home/ubuntu/src/github.com/kirtstark/KirtS/cst236_lab1/cst236_lab1/source/main2.py'
     good = current_file
     normal = ('return nothing', None)
     found = (current_file, None)

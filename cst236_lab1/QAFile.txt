@@ -4,19 +4,7 @@ What is the deal with source/main2.py?
 #333  February 16  Kirt Stark
 
 What is the status of source/main2.py?
-main2.py has been modified locally
-
-What is the status of source/main2.py?
-main2.py has been modified locally
-
-What is the status of source/main2.py?
-main2.py has been modified locally
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
+main2.py is up to date
 
 What is the status of source/main2.py?
 main2.py is a dirty repo
@@ -27,23 +15,11 @@ I have no response for that
 What branch is source/main2.py?
 KirtS
 
-What is the repo root for C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py?
-https:\github.com\OregonTech\KirtS
-
-Where did C:\Users\Devon\Documents\GitHub\KirtS\cst236_lab1\source\main2.py come from ?
-https://github.com/OregonTech/KirtS
-
 Is the source/main2.py in the repo?
 Yes
 
 Is the source/main3.py in the repo?
 No
-
-Is the source/main2.py in the repo?
-No
-
-Is the source/main2.py in the repo?
-Yes
 
 Where are my car keys?
 I don't know, please provide the answer
@@ -63,12 +39,6 @@ Convert 5.6 quarts to liters
 Convert 8745 tickles to miles
 units are not recognized
 
-Is the source/main2.py in the repo?
-No
-
-Is the source/main2.py in the repo?
-Yes
-
 What is the 7 digit of fibonacci?
 13
 
@@ -86,6 +56,21 @@ Was that a question?
 
 How ?
 I don't know, please provide the answer
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+What is the status of source/main2.py?
+main2.py is a dirty repo
+
+Is the source/main2.py in the repo?
+Yes
+
+Is the source/main2.py in the repo?
+Yes
 
 What ?
 I don't know, please provide the answer
@@ -111,6 +96,9 @@ Was that a question?
 why is this a question?
 Was that a question?
 
+who is this a question?
+Was that a question?
+
 is this a question?
 Was that a question?
 
@@ -127,9 +115,6 @@ Whyis this a question
 Was that a question?
 
 Whois this a question
-Was that a question?
-
-Howno space here?
 Was that a question?
 
 Whatno space here?
@@ -152,21 +137,6 @@ I don't know, please provide the answer
 
 Where are my car keys?
 Your keys are under the sofa
-
-What is the status of source/main2.py?
-main2.py has been not been checked in
-
-What is the status of source/main2.py?
-main2.py is up to date
-
-What is the status of source/main2.py?
-main2.py is a dirty repo
-
-Is the source/main2.py in the repo?
-No
-
-who is this a question?
-Was that a question?
 
 How many possible ways are there to skin a really fat cat?
 I don't know, please provide the answer
@@ -201,9 +171,6 @@ scalene
 What type of triangle is 2.98 2.98 2.98?
 equilateral
 
-What type of triangle is 2.5 3.845 2.5?
-isosceles
-
 What type of triangle is 5.8 3.4 2.627?
 scalene
 
@@ -218,18 +185,6 @@ Kirt Stark does!
 
 Why did the chicken cross the road?
 To prove to the armadillo that it can be done
-
-Where are my car keys?
-I don't know, please provide the answer
-
-Where are my car keys?
-Your keys are under the sofa
-
-Please clear memory
-done
-
-Where are my car keys?
-I don't know, please provide the answer
 
 Convert 3.2 centimeters to inches
 1.259842528
@@ -249,6 +204,9 @@ Convert 8.2 liters to quarts
 Convert 27 fahrenheit to centigrade
 -2.77777777778
 
+Convert 38 centigrade to fahrenheit
+100.4
+
 Convert 72.9 pounds to kilograms
 33.066883773
 
@@ -266,9 +224,6 @@ units are not recognized
 
 Convert 8745 feet to sneezes
 units are not recognized
-
-What is the 0 digit of fibonacci?
-0
 
 What is the 1 digit of fibonacci?
 1
@@ -291,6 +246,9 @@ What is the 6 digit of fibonacci?
 What is the 7 digit of fibonacci?
 13
 
+What is the -4 digit of fibonacci?
+I cannot process a negative number
+
 What is 4 multiplied by 6.2?
 24.8
 
@@ -304,9 +262,6 @@ Open the door hal
 I'm afraid I can't do that Devon
 
 What is the 1 digit of pi?
-3
-
-What is the 10 digit of pi?
 3
 
 What is the 11 digit of pi?
@@ -327,6 +282,9 @@ What is the 3 digit of pi?
 What is the 4 digit of pi?
 1
 
+What is the 5 digit of pi?
+5
+
 What is the 6 digit of pi?
 9
 
@@ -344,9 +302,6 @@ The number must be greater than zero
 
 What is the 0 digit of pi?
 The number must be greater than zero
-
-What time is it?
-Tue Mar 08 12:08:41 2016
 
 What is the 7  87 digit of fibonacci?
 I have no response for that
@@ -369,6 +324,9 @@ What is the cube of 1?
 What is the cube of 10?
 1000.0
 
+What is the mass of a measure of lithium with a volume of 87.2456 cubic meters?
+46676.396
+
 What is the mass of a measure of potassium with a volume of .257 cubic meters?
 221.02
 
@@ -386,9 +344,6 @@ What is the mass of a measure of titanium with a volume of 18.6 cubic meters?
 
 What is the mass of a measure of Kryptonite with a volume of 27 cubic meters?
 unfamiliar material
-
-What is 5 when it is multiplied by 2 and then added to 7?
-17.0
 
 What is 0 when it is multiplied by 0 and then added to 0?
 0.0
@@ -408,6 +363,9 @@ What is 5 when it is multiplied by 2 and added to -7?
 What is 50 when it is multiplied by 22 and added to 15?
 1115.0
 
+Hal, take the garbage out.
+I am busy right now, you do it.
+
 Open the door hal  87 94
 I have no response for that
 
@@ -426,39 +384,81 @@ How many times will 2 divide completely into 1000?
 How many times will -7 divide completely into 25?
 -3.0
 
-How many times will 8 divide completely into 0?
-0
+Why are these labs such a struggle for me?
+Your lack of Python knowledge plays into it . . .
+
+Why are these labs such a struggle for me?
+Have you considered studying?
+
+Why are these labs such a struggle for me?
+It is supposed to be difficult, that is how you learn
+
+Why are these labs such a struggle for me?
+Alien abduction.
 
 Why are these labs such a struggle for me?
 I do not know.
 
 Why are these labs such a struggle for me?
-Too much goofing off
+Brain damage. Definitely brain damage.
 
-Why are these labs such a struggle for me?
-Too much goofing off
+What type of triangle is 2.5 3.845 2.5?
+isosceles
 
-Why are these labs such a struggle for me?
-Too much goofing off
+Where are my car keys?
+I don't know, please provide the answer
 
-Why are these labs such a struggle for me?
-Um, how much have you had to drink?
+Where are my car keys?
+Your keys are under the sofa
 
-Why are these labs such a struggle for me?
-Alien abduction.
+Please clear memory
+done
 
-Convert 38 centigrade to fahrenheit
-100.4
+Where are my car keys?
+I don't know, please provide the answer
 
-What is the -4 digit of fibonacci?
-I cannot process a negative number
+What is the 0 digit of fibonacci?
+0
 
-What is the 5 digit of pi?
-5
+What is the 10 digit of pi?
+3
 
-What is the mass of a measure of lithium with a volume of 87.2456 cubic meters?
-46676.396
+What time is it?
+Wed Mar 09 09:32:01 2016
 
-Hal, take the garbage out.
-I am busy right now, you do it.
+What is 5 when it is multiplied by 2 and then added to 7?
+17.0
+
+How many times will 8 divide completely into 0?
+0
+
+Howno space here?
+Was that a question?
+
+What is the status of source/main2.py?
+I have no response for that
+
+What is the status of source/main2.py?
+I have no response for that
+
+What is the status of source/main2.py?
+I have no response for that
+
+What is the status of source/main2.py?
+I have no response for that
+
+What is the repo root for /home/ubuntu/src/github.com/kirtstark/KirtS/cst236_lab1/cst236_lab1/source/main2.py?
+I have no response for that
+
+Where did /home/ubuntu/src/github.com/kirtstark/KirtS/cst236_lab1/cst236_lab1/source/main2.py come from ?
+I have no response for that
+
+Is the source/main2.py in the repo?
+Yes
+
+Is the source/main2.py in the repo?
+Yes
+
+Is the source/main2.py in the repo?
+Yes
 
